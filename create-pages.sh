@@ -16,7 +16,7 @@ boil_dir='boilerplate/'
 page_dir='pages/'
 site_dir='website/'
 css_dir='css/'
-root_dir='/home/betelgeuse/2023_fall/sdev153_web_site_development/final_project/website'
+root_dir='/home/betelgeuse/2023_fall/sdev153_web_site_development/sdev153_final_project/website'
 
 title_placeholder="\*\*TITLE-GOES-HERE\*\*"
 descr_placeholder="\*\*DESCRIPTION-GOES-HERE\*\*"
