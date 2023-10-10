@@ -16,6 +16,8 @@ boil_dir='boilerplate/'
 page_dir='pages/'
 site_dir='website/'
 css_dir='css/'
+img_dir='img/'
+root_dir='http://jknol1.s3-website-us-east-1.amazonaws.com/final07'
 root_dir='/home/betelgeuse/2023_fall/sdev153_web_site_development/sdev153_final_project/website'
 
 title_placeholder="\*\*TITLE-GOES-HERE\*\*"
@@ -26,8 +28,8 @@ root_placeholder="\*\*ROOT\*\*"
 # Remove old website files.
 rm -r "$site_dir"*
 
-# Copy CSS directory into website.
-cp -r "$css_dir" "$site_dir"
+# Copy CSS and image directories into website.
+cp -r "$css_dir" "$img_dir" "$site_dir"
 
 # Loop through all pages.
 for page in $(find "$page_dir" -type f -name "*.html"); do
