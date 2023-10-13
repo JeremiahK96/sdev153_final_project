@@ -288,6 +288,23 @@ ul.tags>li>a {
 	border-radius: 100%;
 }
 
+table {
+	margin: 0 auto;
+}
+table, th, td {
+	border: 1px solid var(--ClrPriLgt);
+}
+th, td {
+	padding: 0.5ch;
+}
+th {
+	background-color: var(--ClrPriLgt);
+	color: var(--ClrPriDrk);
+}
+tr:nth-child(even) td {
+	background-color: var(--ClrPriLow);
+}
+
 @media (min-width: 600px) {
 	header>nav {
 		flex-flow: row;
