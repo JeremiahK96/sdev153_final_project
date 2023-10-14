@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>How to Compile Your First C Program</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/home/betelgeuse/2023_fall/sdev153_web_site_development/sdev153_final_project/website/css/main.css">
+</head>
+
+<body>
+
+<a href="#content-start" class="skip">Skip to main content.</a>
+
+<header>
+	<nav>
+		<ul class="nav-home">
+			<li><a href="/home/betelgeuse/2023_fall/sdev153_web_site_development/sdev153_final_project/website/index.html">Jeremiah<span>Knol</span></a></li>
+		</ul>
+		<ul class="nav-links">
+			<li><a href="/home/betelgeuse/2023_fall/sdev153_web_site_development/sdev153_final_project/website/blog.html">Blog</a></li>
+			<li><a href="https://github.com/JeremiahK96/">Code</a></li>
+			<li><a href="/home/betelgeuse/2023_fall/sdev153_web_site_development/sdev153_final_project/website/about.html">About</a></li>
+			<li><a href="/home/betelgeuse/2023_fall/sdev153_web_site_development/sdev153_final_project/website/contact.html" rel="nofollow">Contact</a></li>
+		</ul>
+	</nav>
+</header>
+
+<main class="blogpost">
+	<article>
+		<h1 id="content-start">How to Compile Your First C Program</h1>
+		<div class="post-header">
+			<ul>
+				<li class="category"><a href="/home/betelgeuse/2023_fall/sdev153_web_site_development/sdev153_final_project/website/blog.html#cat-programming">Programming</a></li>
+				<li class="author">Jeremiah Knol</li>
+				<li><time datetime="2023-09-23">2023.09.23</time></li>
+			</ul>
+		</div>
+
+		<p>Scripting languages like Python or Bash are interpreted into machine code on-the-fly, which means that the program itself is the source code. But C is a compiled language, so you must compile your source code into machine code first before being able to execute it. Jump start your journey into C by learning how to compile your first C program!</p>
+
+		<h2>Setup Your Compiler</h2>
+
+		<p>There are multiple options when it comes to compilers for C, but for this article we will stick with gcc. Make sure you have it downloaded and installed before moving on to the next step, or you will not be able to compile anything!</p>
+
+		<h2>Write the Program</h2>
+
+		<p>Now it's time to get started on the code! Here is the example we will be running, save it to the file <code>hello.c</code>:</p>
+
+<pre>#include &lt;stdio.h&gt;
+int main() {
+	printf("Hello World\n");
+	return 0;
+}</pre>
+
+		<p>In C, <code>main</code> is the name of the function that must be used for the starting point of your program. It can actually take arguments from the command line, but in this example, we won't use any. We are simply including the standard input/output header called <code>stdio.h</code>, which gives us the <code>printf()</code> function which can output characters to the terminal.</p>
+
+		<h2>Compile the Program</h2>
+
+		<p>Now that we have the source code done, we need to compile it to machine code. Run the following command in the terminal, from the same directory as the source code file:</p>
+
+		<pre>gcc -o hello hello.c</pre>
+
+		<p>In this command, <code>gcc</code> is the compiler we are running, <code>-o hello</code> means we want to output the machine code executable to a file called <code>hello</code>, and <code>hello.c</code> is the source code we want to compile.</p>
+
+		<p>Now, if you execute the <code>hello</code> executible, you will see <code>Hello World</code> printed to the terminal! Congratulations, you just made your first C program!</p>
+
+		<div class="post-footer">
+			<ul class="tags">
+				<li><a href="/home/betelgeuse/2023_fall/sdev153_web_site_development/sdev153_final_project/website/blog.html#tag-programming">Programming</a></li>
+				<li><a href="/home/betelgeuse/2023_fall/sdev153_web_site_development/sdev153_final_project/website/blog.html#tag-c">C</a></li>
+				<li><a href="/home/betelgeuse/2023_fall/sdev153_web_site_development/sdev153_final_project/website/blog.html#tag-beginner">Beginner</a></li>
+			</ul>
+		</div>
+	</article>
+</main>
+
+<footer>
+	<p>Thank you for visiting my website!</p>
+	<p>If you would like to send me a comment, check out my <a href="/home/betelgeuse/2023_fall/sdev153_web_site_development/sdev153_final_project/website/contact.html" rel="nofollow">contact page</a>.</p>
+</footer>
+
+</body>
+
+</html>
