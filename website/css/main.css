@@ -311,6 +311,16 @@ tr:nth-child(even) td {
 	background-color: var(--ClrPriLow);
 }
 
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 1ch;
+	max-width: 30ch;
+	margin: 0 auto;
+	padding: 2ch;
+	border: 1px solid var(--ClrPriLgt);
+}
+
 code, pre {
 	font-family: "Courier New", "Courier", monospace;
 	background-color: black;
@@ -351,5 +361,11 @@ pre {
 	main {
 		padding-left: 0;
 		padding-right: 0;
+	}
+
+	form {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		max-width: 75%;
 	}
 }
