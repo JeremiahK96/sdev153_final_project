@@ -315,13 +315,13 @@ code, pre {
 	font-family: "Courier New", "Courier", monospace;
 	background-color: black;
 	background-color: #00000080;
-	color: var(--ClrPriBrt);
 }
 
 pre {
+	overflow: scroll;
+	color: var(--ClrPriBrt);
 	padding: 1ch;
 	border: 0.3ch solid var(--ClrPriLgt);
-	overflow: scroll;
 }
 
 @media (min-width: 600px) {

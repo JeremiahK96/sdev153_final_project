@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>How to Use Functions in Python</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/home/betelgeuse/2023_fall/sdev153_web_site_development/sdev153_final_project/website/css/main.css">
+</head>
+
+<body>
+
+<a href="#content-start" class="skip">Skip to main content.</a>
+
+<header>
+	<nav>
+		<ul class="nav-home">
+			<li><a href="/home/betelgeuse/2023_fall/sdev153_web_site_development/sdev153_final_project/website/index.html">Jeremiah<span>Knol</span></a></li>
+		</ul>
+		<ul class="nav-links">
+			<li><a href="/home/betelgeuse/2023_fall/sdev153_web_site_development/sdev153_final_project/website/blog.html">Blog</a></li>
+			<li><a href="https://github.com/JeremiahK96/">Code</a></li>
+			<li><a href="/home/betelgeuse/2023_fall/sdev153_web_site_development/sdev153_final_project/website/about.html">About</a></li>
+			<li><a href="/home/betelgeuse/2023_fall/sdev153_web_site_development/sdev153_final_project/website/contact.html" rel="nofollow">Contact</a></li>
+		</ul>
+	</nav>
+</header>
+
+<main class="blogpost">
+	<article>
+		<h1 id="content-start">How to Use Functions in Python</h1>
+		<div class="post-header">
+			<ul>
+				<li class="category"><a href="/home/betelgeuse/2023_fall/sdev153_web_site_development/sdev153_final_project/website/blog.html#cat-programming">Programming</a></li>
+				<li class="author">Jeremiah Knol</li>
+				<li><time datetime="2023-09-23">2023.09.23</time></li>
+			</ul>
+		</div>
+
+		<p>As you learn to make longer programs, eventually you will reach a point where it becomes too complicated to easily keep track of. In the moment, you might be fine, but if you leacve it for a week and then come back, you will be hopelessly lost trying to catch your bearings again.</p>
+
+		<h2>Modularity in Programming</h2>
+
+		<p>In Python, and in most other programming languages, it is important to make your programs in a modular fashion. You want to break the entire task you want to accomplish down into smaller and smaller steps, so that each step is fairly small and is easy to understand. Modularity allows you to make your code abstract, so that anyone who understands Python can look at it and quickly see what's going on, without having to know all the details.</p>
+
+		<h2>Simple Example</h2>
+
+		<p>In this simple example, we ask the user to input a temperature in Celsius, convert the value into Fahrenheit, and then print the result. This is three steps, so we will create and call three functions to do it.</p>
+
+		<h3>Writing the <code>main()</code> Function</h3>
+
+<pre>def main():
+  celsius = getCelsius()
+  fahrenheit = toFahrenheit(celsius)
+  showResult(celsius, fahrenheit)</pre>
+
+		<p>Already, our <code>main</code> function is easy to understand. When you look at this function, it reads like English: Get the Celsius value and store it. Convert it to a Fahrenheit value, and store that. Show both values to the user. Of course, this is an extremely simple example, but it easily shows the power of using functions.</p>
+
+		<h3>Adding the Functions</h3>
+
+		<p>Any Python coder who looks at the above code will likely already know exactly what's going on under the hood, but they can always look deeper into each function to find out if they have to.</p>
+
+<pre>def getCelsius():
+    temp = input("Enter a temperature in Celsius: ")
+    return float(temp)
+
+def toFahrenheit(c):
+    return 9 / 5 * c + 32
+
+def showResult(celsius, fahrenheit):
+  print(celsius, "degrees Celsius is", fahrenheit, "degrees Fahrenheit.")</pre>
+
+		<div class="post-footer">
+			<ul class="tags">
+				<li><a href="/home/betelgeuse/2023_fall/sdev153_web_site_development/sdev153_final_project/website/blog.html#tag-programming">Programming</a></li>
+				<li><a href="/home/betelgeuse/2023_fall/sdev153_web_site_development/sdev153_final_project/website/blog.html#tag-scripting">Scripting</a></li>
+				<li><a href="/home/betelgeuse/2023_fall/sdev153_web_site_development/sdev153_final_project/website/blog.html#tag-python">Python</a></li>
+				<li><a href="/home/betelgeuse/2023_fall/sdev153_web_site_development/sdev153_final_project/website/blog.html#tag-beginner">Beginner</a></li>
+			</ul>
+		</div>
+	</article>
+</main>
+
+<footer>
+	<p>Thank you for visiting my website!</p>
+	<p>If you would like to send me a comment, check out my <a href="/home/betelgeuse/2023_fall/sdev153_web_site_development/sdev153_final_project/website/contact.html" rel="nofollow">contact page</a>.</p>
+</footer>
+
+</body>
+
+</html>
