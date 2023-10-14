@@ -334,6 +334,10 @@ pre {
 	border: 0.3ch solid var(--ClrPriLgt);
 }
 
+.hero-img {
+	width: 100%;
+}
+
 @media (min-width: 600px) {
 	header>nav {
 		flex-flow: row;
