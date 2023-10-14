@@ -28,29 +28,90 @@
 
 <main class="blogpost">
 	<article>
-		<section class="post-header">
-			<h1 id="content-start">Hello World in HTML</h1>
+		<h1 id="content-start">Hello World in HTML</h1>
+		<div class="post-header">
 			<ul>
 				<li class="category"><a href="/home/betelgeuse/2023_fall/sdev153_web_site_development/sdev153_final_project/website/blog.html#cat-programming">Programming</a></li>
 				<li class="author">Jeremiah Knol</li>
-				<li><time datetime="2023-09-23" pubdate="pubdate">2023.09.23</time></li>
+				<li><time datetime="2023-09-23">2023.09.23</time></li>
 			</ul>
-		</section>
-		<section class="content">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus viverra vitae congue eu consequat ac. Amet nisl suscipit adipiscing bibendum est ultricies integer. Ultricies tristique nulla aliquet enim tortor at auctor. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis. Pulvinar neque laoreet suspendisse interdum. Hendrerit dolor magna eget est lorem ipsum dolor sit amet. Lobortis scelerisque fermentum dui faucibus in ornare quam. Metus dictum at tempor commodo ullamcorper. Diam sollicitudin tempor id eu. Mi in nulla posuere sollicitudin. Ac turpis egestas integer eget aliquet nibh praesent tristique.</p>
-			<p>Purus in mollis nunc sed id semper risus. Nunc lobortis mattis aliquam faucibus purus in. Posuere lorem ipsum dolor sit amet consectetur. Dignissim enim sit amet venenatis urna cursus. Lacus vestibulum sed arcu non odio euismod lacinia at. Nec feugiat nisl pretium fusce id velit ut tortor pretium. Ut placerat orci nulla pellentesque. Sodales ut eu sem integer vitae justo eget magna fermentum. Mi proin sed libero enim sed faucibus turpis in. Blandit massa enim nec dui nunc mattis. Id cursus metus aliquam eleifend mi. Integer feugiat scelerisque varius morbi enim nunc faucibus a.</p>
-			<p>Netus et malesuada fames ac. Nulla pharetra diam sit amet nisl. Vel quam elementum pulvinar etiam non. Et ligula ullamcorper malesuada proin libero nunc. Amet nulla facilisi morbi tempus iaculis. Tincidunt ornare massa eget egestas purus viverra accumsan. Leo urna molestie at elementum eu facilisis. Libero nunc consequat interdum varius sit amet mattis. Ut tortor pretium viverra suspendisse potenti nullam ac. Odio pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus.</p>
-			<p>Ultrices gravida dictum fusce ut placerat orci nulla. Consectetur libero id faucibus nisl tincidunt eget. Neque volutpat ac tincidunt vitae semper quis lectus nulla. Adipiscing elit duis tristique sollicitudin. Sed sed risus pretium quam vulputate dignissim suspendisse in. Varius vel pharetra vel turpis nunc eget lorem dolor sed. Malesuada bibendum arcu vitae elementum curabitur vitae nunc sed velit. In ornare quam viverra orci sagittis eu volutpat. Nam at lectus urna duis convallis convallis. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper.</p>
-			<p>Magna sit amet purus gravida quis blandit. Felis imperdiet proin fermentum leo vel orci porta non pulvinar. Turpis cursus in hac habitasse. Imperdiet nulla malesuada pellentesque elit eget gravida cum sociis natoque. Auctor elit sed vulputate mi sit amet. Scelerisque felis imperdiet proin fermentum leo vel orci porta non. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Purus semper eget duis at tellus at urna. Pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus. Elementum nisi quis eleifend quam adipiscing vitae.</p>
-		</section>
-		<section class="post-footer">
+		</div>
+
+		<p>The basics of HTML is not difficult to learn. Unlike many programming languages, HTML is simply for marking up documents, so it isn't a true "programming language" like C or Java.</p>
+
+		<h2>Anotomy of a Basic HTML Document</h2>
+
+		<p>Every HTML document follows the same basic root layout. This consists of a document type declaration, the <code>&lt;html&gt;</code> element, the head, and the body.</p>
+
+		<p>The homepage of a website is typically saved in a file called <code>index.html</code>, so save the following code to a text file with that exact name:</p>
+
+<pre>&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+	&lt;head&gt;
+	&lt;/head&gt;
+
+	&lt;body&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+		<p>The first line is the document type declaration, and it tells your browser that this is in fact an HTML document.</p>
+
+		<p>Next we see the beginning of the <code>html</code> element. It is "opened" with <code>&lt;html&gt;</code>, and then "closed" on the last line with <code>&lt;/html&gt;</code>, almost like a "begin parentheses" and "end parentheses". <strong>Every element within HTML code should be opened and closed in this way.</strong>
+
+		<p>Elements can be contained inside of other elements. As you can see, we are opening and closing both the <code>head</code> and <code>body</code> elements <em>while inside of the <code>html</code> element.</em> All of your HTML code must be contained within the <code>html</code> element.</p>
+
+		<h2>Adding Content</h2>
+
+		<p>At this point, we have a document "skeleton", but there is nothing in it yet. You can actually open this file in your browser, but it will be a blank page. The next step is to fill in some content for your webpage!</p>
+
+		<h3>Adding a Title</h3>
+
+		<p>The first thing we will add is a title for the page, which will be displayed on the tab within the browser. To do this, all we need is to add a <code>title</code> element inside of the <code>head</code> element.</p> 
+
+<pre>	&lt;head&gt;
+		&lt;title&gt;My First Webpage&lt;/title&gt;
+	&lt;/head&gt;</pre>
+
+		<p>If you refresh your browser now, you will see your page title shown in the tab!</p>
+
+		<h3>Adding a Heading</h3>
+
+		<p>The <code>head</code> section of an HTML document is used to store metadata for the document itself, such as the title. But this is not displayed on the page. To add content to the page, you simply add it into the <code>body</code> element.</p>
+
+		<p>The first thing you probably want to add is the heading for your page, using the <code>h1</code> element. It should be the full title of your webpage, and you should only have a single <code>h1</code> element for each webpage.</p>
+
+<pre>	&lt;body&gt;
+		&lt;h1&gt;My First Webpage&lt;/h1&gt;
+		&lt;p&gt;Hello World&lt;/p&gt;
+	&lt;/body&gt;</pre>
+
+		<p>We also added a <code>p</code> tag, which is the paragraph tag, so we could add some text. You can add as many of these as you want!</p>
+
+		<h2>Complete Example</h2>
+		<p>Here is the full version of the file we created:</p>
+
+<pre>&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;My First Webpage&lt;/title&gt;
+	&lt;/head&gt;
+
+	&lt;body&gt;
+		&lt;h1&gt;My First Webpage&lt;/h1&gt;
+		&lt;p&gt;Hello World&lt;/p&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+		<div class="post-footer">
 			<ul class="tags">
 				<li><a href="/home/betelgeuse/2023_fall/sdev153_web_site_development/sdev153_final_project/website/blog.html#tag-programming">Programming</a></li>
 				<li><a href="/home/betelgeuse/2023_fall/sdev153_web_site_development/sdev153_final_project/website/blog.html#tag-scripting">Scripting</a></li>
 				<li><a href="/home/betelgeuse/2023_fall/sdev153_web_site_development/sdev153_final_project/website/blog.html#tag-html">HTML</a></li>
 				<li><a href="/home/betelgeuse/2023_fall/sdev153_web_site_development/sdev153_final_project/website/blog.html#tag-beginner">Beginner</a></li>
 			</ul>
-		</section>
+		</div>
 	</article>
 </main>
 
